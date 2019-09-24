@@ -4,16 +4,16 @@ export default class BookstoreService {
   data = [
     {
       id: 1,
-      title: 'Production-Ready Microservices',
-      author: 'Susan J. Fowler',
-      price: 32,
-      coverImage: 'https://images-na.ssl-images-amazon.com/images/I/41yJ75gpV-L._SX381_BO1,204,203,200_.jpg'},
+      title: 'Learning PHP, MySQL, JavaScript, CSS & HTML5',
+      author: 'Robin Nixon',
+      price: 13,
+      coverImage: 'https://images-na.ssl-images-amazon.com/images/I/51AkW1znNmL._SX379_BO1,204,203,200_.jpg'},
     {
       id: 2,
-      title: 'Release It!',
-      author: 'Michael T. Nygard',
-      price: 45,
-      coverImage: 'https://images-na.ssl-images-amazon.com/images/I/414CRjLjwgL._SX403_BO1,204,203,200_.jpg'}
+      title: 'Learning React',
+      author: 'Alex Banks',
+      price: 35,
+      coverImage: 'https://images-na.ssl-images-amazon.com/images/I/51FHuacxYjL._SX379_BO1,204,203,200_.jpg'}
   ];
 
   getBooks() {

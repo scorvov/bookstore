@@ -5,7 +5,7 @@ import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 
 import { withBookstoreService } from '../hoc';
-import { fetchBooks, bookAddedToCart } from '../../actions';
+import { fetchBooks, bookAddedToCart } from '../../store/actions';
 import { compose } from '../../utils';
 
 import Spinner from '../spinner';

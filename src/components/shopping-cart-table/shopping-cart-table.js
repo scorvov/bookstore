@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import {
   bookAddedToCart,
   bookRemovedFromCart,
-  allBooksRemovedFromCart } from '../../actions';
+  allBooksRemovedFromCart } from '../../store/actions';
 
 import './shopping-cart-table.css';
 
