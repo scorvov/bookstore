@@ -3,10 +3,14 @@ export const loadState = () => {
         const serializedState = localStorage.getItem('cart');
 
         if(serializedState == null)
-            return [];
+            return {
+                cartItems: [],
+                orderTotal: 0,
+                itemsTotal: 0,
+            };
         return JSON.parse(serializedState);
     } catch (e) {
-        return[];
+        return {};
     }
 };
 
