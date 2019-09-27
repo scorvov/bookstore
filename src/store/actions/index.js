@@ -40,6 +40,13 @@ export const allBooksRemovedFromCart = (bookId) => {
   };
 };
 
+export const initCart = (state) => {
+  return {
+    type: 'INIT_CART_FROM_STORAGE',
+    payload: state
+  };
+};
+
 /*const fetchBooksOld = (bookstoreService, dispatch) => () => {
   dispatch(booksRequested());
   bookstoreService.getBooks()

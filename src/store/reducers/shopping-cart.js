@@ -64,6 +64,8 @@ const updateShoppingCart = (state, action) => {
   }
 
   switch(action.type) {
+    case 'INIT_CART_FROM_STORAGE':
+      return action.payload;
     case 'BOOK_ADDED_TO_CART':
       return updateOrder(state, action.payload, 1);
 

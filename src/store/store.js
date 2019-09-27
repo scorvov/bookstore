@@ -2,6 +2,8 @@ import { createStore, applyMiddleware } from 'redux';
 import thunkMiddleware from 'redux-thunk';
 
 import reducer from './reducers';
+import {loadState, saveState} from "../utils/helpers";
+import {initCart} from "./actions";
 
 
 const logMiddleware = ({ getState }) => (next) => (action) => {
@@ -22,6 +24,12 @@ const stringMiddleware = () => (next) => (action) => {
 const store = createStore(reducer, applyMiddleware(
   thunkMiddleware, stringMiddleware, logMiddleware));
 
+const initialState = loadState();
+store.dispatch(initCart(initialState));
+
+store.subscribe(() => {
+  saveState(store.getState().shoppingCart);
+});
 
 const delayedActionCreator = (timeout) => (dispatch) => {
   setTimeout(() => dispatch({
